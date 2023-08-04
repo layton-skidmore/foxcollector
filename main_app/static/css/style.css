@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    font-family: 'REM', sans-serif;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #ffffff; 
+    color: #ff0000; 
+  }
+  
+  main {
+    flex: 1 0 auto;
+  }
+  
+  footer.page-footer {
+    padding-top: 0;
+    text-align: right;
+    background-color: #ffffff; 
+    color: #ff0000; 
+  }
+  
+  .card {
+    background-color: #ff0000; 
+    font-family: 'REM', sans-serif;
+    color: #ffffff; 
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .brand-logo {
+    font-size: 24px;
+    font-family: 'REM', sans-serif;
+    font-weight: bold;
+    color: #ff0000; 
+    white-space: nowrap;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  ul li a {
+    color: #ff0000; 
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  ul li a:hover {
+    color: #ffffff; 
+  }
