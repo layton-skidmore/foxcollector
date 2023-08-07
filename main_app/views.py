@@ -1,10 +1,6 @@
 from django.shortcuts import render
-
-foxes = [
-  {'name': 'Felix', 'species': 'Arctic Fox', 'description': 'Fearless leader', 'age': 5},
-  {'name': 'Hans', 'species': 'Fennec Fox', 'description': 'Playful little guy and twin of Frans', 'age': 2},
-  {'name': 'Frans', 'species': 'Fennec Fox', 'description': 'Food is his passion. Twin of Hans', 'age': 2},
-]
+from django.views.generic.edit import CreateView
+from .models import Fox
 
 
 def home(request):
@@ -17,3 +13,19 @@ def foxes_index(request):
   return render(request, 'foxes/index.html', {
     'foxes': foxes
   })
+
+def foxes_index(request):
+    foxes = Fox.objects.all()
+    return render(request, 'foxes/index.html', 
+    { 
+        'foxes': foxes 
+    }
+)
+
+def foxes_detail(request, fox_id):
+  fox = Fox.objects.get(id=fox_id)
+  return render(request, 'foxes/detail.html', { 'fox': fox })
+
+class FoxCreate(CreateView):
+  model = Fox
+  fields = ['name', 'species', 'description', 'age']

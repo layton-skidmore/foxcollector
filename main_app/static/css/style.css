@@ -65,3 +65,13 @@ body {
   ul li a:hover {
     color: #ffffff; 
   }
+
+  
+.card a {
+  color: white;
+}
+
+
+.card a:hover {
+  color: blue; 
+}

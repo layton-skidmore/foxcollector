@@ -4,18 +4,22 @@
 <h1>Fox List</h1>
 
 {% for fox in foxes %}
-  <div class="card">
+<div class="card">
+  <!-- Add this <a> tag -->
+  <a href="/foxes/{{ fox.id }}">
     <div class="card-content">
       <span class="card-title">{{ fox.name }}</span>
       <p>Species: {{ fox.species }}</p>
-      <p>Description: {{ fox.description }}</p>
+      <p>Description: {{ fox.description|linebreaks }}</p>
       {% if fox.age > 0 %}
         <p>Age: {{ fox.age }}</p>
       {% else %}
         <p>Age: Pup</p>
       {% endif %}
     </div>
-  </div>
+  <!-- Don't forget the </a> closing tag -->
+  </a>
+</div>
 {% endfor %}
 
 {% endblock %}
