@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Fox
 
 
@@ -29,3 +29,13 @@ def foxes_detail(request, fox_id):
 class FoxCreate(CreateView):
   model = Fox
   fields = ['name', 'species', 'description', 'age']
+  success_url = '/foxes/{fox_id}'
+
+class FoxUpdate(UpdateView):
+  model = Fox
+  # Let's disallow the renaming of a cat by excluding the name field!
+  fields = ['species', 'description', 'age']
+
+class FoxDelete(DeleteView):
+  model = Fox
+  success_url = '/foxes'

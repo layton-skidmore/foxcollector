@@ -6,5 +6,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('foxes/', views.foxes_index, name='index'),
     path('foxes/<int:fox_id>/', views.foxes_detail, name='detail'),
-    path('cats/create/', views.CatCreate.as_view(), name='cats_create'),
+    path('foxes/create/', views.FoxCreate.as_view(), name='foxes_create'),
+    path('foxes/<int:pk>/update/', views.FoxUpdate.as_view(), name='foxes_update'),
+    path('foxes/<int:pk>/delete/', views.FoxDelete.as_view(), name='foxes_delete')
  ]
