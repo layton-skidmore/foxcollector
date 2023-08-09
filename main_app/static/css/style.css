@@ -57,7 +57,7 @@ body {
   }
   
   ul li a {
-    color: #ff0000; 
+    color: white; 
     text-decoration: none;
     transition: color 0.2s ease;
   }
@@ -73,5 +73,24 @@ body {
 
 
 .card a:hover {
+  color: blue; 
+}
+
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  color: white; 
+}
+
+
+nav ul li a {
+  color: white; 
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+
+nav ul li a:hover {
   color: blue; 
 }

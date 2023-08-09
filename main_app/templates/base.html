@@ -8,6 +8,7 @@
   <title>Fox Collector</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=REM:wght@200&display=swap" rel="stylesheet">
@@ -21,6 +22,8 @@
         </ul>
         <ul class="right">
           <li><a href="/about">About</a></li>
+          <li><a href="{% url 'toys_create' %}">Add a Toy</a></li>
+          <li><a href="{% url 'toys_index' %}">View All Toys</a></li>
           <li><a href="{% url 'foxes_create' %}">Add a Fox</a></li>
           <li><a href="/foxes">View All My Foxes</a></li>
         </ul>
